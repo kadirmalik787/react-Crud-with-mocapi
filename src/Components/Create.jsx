@@ -13,18 +13,24 @@ const Create = () => {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    console.log("hello")
-   axios.post(
-       'https://642a6a07b11efeb75998ec15.mockapi.io/crud-api',
-       {name: name,
-        email:email,
-        header,
-      }
-   )
-     .then(()=>{
-      history('/read')
+    if(name ==""&&email==""){
+      alert("fill Name and Email")
 
-     })      
+    }else{
+      axios.post(
+        'https://642a6a07b11efeb75998ec15.mockapi.io/crud-api',
+        {name: name,
+         email:email,
+         header,
+       }
+    )
+      .then(()=>{
+       history('/read')
+ 
+      })      
+      
+    }
+   
   }
   return (
     <>
