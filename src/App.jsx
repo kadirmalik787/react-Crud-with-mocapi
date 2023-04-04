@@ -7,7 +7,7 @@ import Update from "./Components/Update";
 function App() {
   return (
     <div className="container">
-      <BrowserRouter>
+      <BrowserRouter basename="/react-Crud-with-mocapi">
         <Routes>
           <Route exact path="/" element={<Create />}></Route>
           <Route path="/read" element={<Read/>}></Route>
